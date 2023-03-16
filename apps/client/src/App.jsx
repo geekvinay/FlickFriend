@@ -9,6 +9,10 @@ const router = createBrowserRouter([
     element: <Layout />
   },
   {
+    path: '/chat',
+    element: <Layout />
+  },
+  {
     path: '/signup',
     element: <Layout />
   }

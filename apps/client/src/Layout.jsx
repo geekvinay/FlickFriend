@@ -17,14 +17,7 @@ const Layout = () => {
         <Footer />
       </div>
     )
-  if (useLocation().pathname == '/chat')
-    return (
-      <div className='min-h-screen min-w-screen flex flex-col justify-between'>
-        <Navbar />
-        <ChatPage />
-        <Footer />
-      </div>
-    )
+  if (useLocation().pathname == '/chat') return <ChatPage />
   if (useLocation().pathname == '/')
     return (
       <div className='min-h-screen min-w-screen flex flex-col justify-between'>

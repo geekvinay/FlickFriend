@@ -14,3 +14,11 @@ body{
 input{
     background: var(--color-bg);
 }
+
+header{
+  background: var(--color-bg);
+}
+
+footer{
+  background: var(--color-bg);
+}

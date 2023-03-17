@@ -34,7 +34,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <header className='h-[80px] w-screen shadow-sm shadow-dark-50'>
+    <header className='h-[80px] w-screen shadow-sm shadow-dark-50 z-50'>
       <ul className='max-w-[1080px] h-full w-full mx-auto list-none flex justify-between items-center'>
         <Link
           to='/'

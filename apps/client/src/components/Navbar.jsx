@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
 import auth from '../../config/auth'
 import { Link } from 'react-router-dom'
+import logoImg from '../assets/logo.svg'
 
 // React Component
 const Navbar = () => {
@@ -40,7 +41,7 @@ const Navbar = () => {
           to='/'
           className='cursor-pointer logo font-sans font-[900] text-[2rem] mr-auto'
         >
-          FlickFriend
+          <img src={logoImg} alt='' className='h-[50px]' />
         </Link>
         <Link
           to='/signup'
@@ -55,10 +56,10 @@ const Navbar = () => {
           create account
         </Link>
         <Link
-          to='/'
+          to='/chat'
           className='cursor-pointer text-base text-bg-dark-400 mx-4 font-sans font-semibold uppercase'
         >
-          films
+          chat
         </Link>
         <li>
           <input

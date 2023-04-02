@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom'
 import Home from './components/Home'
 import Signup from './components/Signup'
 import ChatPage from './pages/ChatPage'
+import ChatDash from './pages/ChatDash'
 
 const Layout = () => {
   const [path, setPath] = useState('')
@@ -17,7 +18,15 @@ const Layout = () => {
         <Footer />
       </div>
     )
-  if (useLocation().pathname == '/chat') return <ChatPage />
+  if (useLocation().pathname == '/chat/chats') return <ChatPage />
+  if (useLocation().pathname == '/chat')
+    return (
+      <div className='min-h-screen min-w-screen h-screen w-screen flex flex-col justify-between'>
+        <Navbar />
+        <ChatDash />
+        <Footer />
+      </div>
+    )
   if (useLocation().pathname == '/')
     return (
       <div className='min-h-screen min-w-screen flex flex-col justify-between'>

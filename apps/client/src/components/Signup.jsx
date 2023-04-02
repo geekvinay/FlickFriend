@@ -4,7 +4,8 @@ import {
   signInWithPopup,
   getAuth,
   GoogleAuthProvider,
-  onAuthStateChanged
+  onAuthStateChanged,
+  getIdToken
 } from 'firebase/auth'
 import auth from '../../config/auth'
 
@@ -13,6 +14,8 @@ const provider = new GoogleAuthProvider()
 const authenticate = () => {
   const auth = getAuth()
   signInWithPopup(auth, provider)
+  const userToken = getIdToken()
+  console.log(userToken)
 }
 
 const Signup = () => {
